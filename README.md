@@ -1,6 +1,12 @@
 # FLA Gallery
 
-FLA Gallery è una piattaforma web progettata per la pubblicazione rapida di gallerie fotografiche di eventi.
+FLA Gallery
+
+Una piattaforma fotografica progettata
+da zero, pixel dopo pixel.
+
+Ogni scatto racconta una storia.
+Ogni release aggiunge un capitolo.
 
 ## Obiettivi
 
@@ -16,3 +22,18 @@ Versione: 0.1.0
 Stato: In sviluppo
 
 Repository privato.
+
+### v0.1.0
+- Hero page
+- Responsive
+- Prima identità grafica
+
+### v0.2.0 (in sviluppo)
+- Gallerie
+- Evento in evidenza
+- JSON
+- Publisher
+
+---
+
+Great Project Team

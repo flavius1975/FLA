@@ -1,34 +1,22 @@
 [
-  {
-    "title": "Latin Summer Night",
-    "date": "26 Luglio 2026",
-    "cover": "galleries/latin-26-luglio/cover.jpg",
-    "photos": 486,
-    "views": 1248,
-    "daysLeft": 5
-  },
-  {
-    "title": "Ginnastica Artistica",
-    "date": "2 Agosto 2026",
-    "cover": "galleries/ginnastica/cover.jpg",
-    "photos": 322,
-    "views": 835,
-    "daysLeft": 9
-  },
-  {
-    "title": "Wedding",
-    "date": "18 Luglio 2026",
-    "cover": "galleries/wedding/cover.jpg",
-    "photos": 612,
-    "views": 1502,
-    "daysLeft": 2
-  },
-  {
-    "title": "Pool Party",
-    "date": "11 Luglio 2026",
-    "cover": "galleries/piscina/cover.jpg",
-    "photos": 275,
-    "views": 642,
-    "daysLeft": 1
-  }
+    {
+        "id": "evento_0005",
+        "visibile": true
+    },
+     {
+        "id": "evento_0004",
+        "visibile": true
+    },
+    {
+        "id": "evento_0003",
+        "visibile": true
+    },
+    {
+        "id": "evento_0002",
+        "visibile": true
+    },
+    {
+        "id": "evento_0001",
+        "visibile": true
+    }
 ]

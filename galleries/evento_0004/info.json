@@ -1,0 +1,19 @@
+{
+    "id": "evento_0004",
+    "titolo": "Park Latino Forlì",
+    "descrizione": "Serata latina",
+    "luogo": "",
+    "data": "2026-07-20 tris",
+    "copertina": "cover.jpg",
+    "focus": "top",
+    "visibile": true,
+    "scadenza_giorni": 30,
+    
+    "foto": [
+   "FLA05433.jpg",
+    "FLA05645.jpg",
+    "FLA05818.jpg",
+    "FLA06213.jpg",
+    "FLA06418.jpg"
+  ]
+}

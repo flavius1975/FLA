@@ -305,6 +305,19 @@ body {
 
     transition:.4s;
 
+    overflow:hidden;
+
+    background:#1c1c1c;
+
+    color:white;
+
+    padding:20px;
+
+    margin:20px 0;
+
+    border-radius:12px;
+
+
 }
 
 .gallery-card:hover{
@@ -317,9 +330,11 @@ body {
 
     width:100%;
 
-    aspect-ratio:4/3;
+    height: 500px;
 
-    object-fit:cover;
+    object-fit: contain;
+
+    background: #111;
 
     display:block;
 
@@ -367,12 +382,6 @@ body {
 
 }
 
-.gallery-card{
-
-    overflow:hidden;
-
-}
-
 .gallery-card img{
 
     border-radius:4px;
@@ -395,4 +404,171 @@ body {
     color:#999;
 
     font-size:.85rem;
+}
+.gallery-link{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    display:block;
+
+}
+.gallery-photo{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.gallery-photo:hover{
+
+    transform:scale(1.02);
+
+}
+/* ==========================
+   LIGHTBOX
+========================== */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.95);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.lightbox.active{
+
+    display:flex;
+
+}
+
+.lightbox img{
+
+    max-width:92vw;
+
+    max-height:92vh;
+
+    object-fit:contain;
+
+}
+
+#close-lightbox{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+.photo-card{
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    background:#181818;
+
+}
+
+.gallery-photo{
+
+    cursor:pointer;
+
+    aspect-ratio:3/2;
+
+    object-fit:cover;
+
+    width:100%;
+
+    display:block;
+
+    transition:.35s;
+
+}
+
+.gallery-photo:hover{
+
+    transform:scale(1.04);
+
+}
+
+#photo-count{
+
+    margin-top:18px;
+
+    color:#C8A96A;
+
+    font-size:.95rem;
+
+    letter-spacing:.08em;
+
+    font-weight:600;
+
+}
+
+.topbar{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    z-index:100;
+
+}
+
+.back-button{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    padding:12px 18px;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.back-button:hover{
+
+    background:#C8A96A;
+
+    color:#111;
+
 }

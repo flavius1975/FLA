@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>FLAVIUS e20</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-<header class="hero">
+    <nav class="topbar">
+
+    <a href="index.html" class="back-button">
+        ← Torna agli eventi
+    </a>
+
+</nav>
+
+<header class="hero" style="height:60vh;">
 
     <div class="overlay"></div>
 
-    <img src="images/hero.jpg" alt="Hero Image">
+    <img id="cover-image" src="" alt="Cover">
 
     <section class="hero-content">
 
-        <h1>
-            FLAVIUS
-            <span>e20</span>
+        <h1 id="event-title">
+            Caricamento...
         </h1>
 
-        <p>
-            Ogni fotografia racconta un'emozione.
-        </p>
+        <p id="event-description"></p>
 
-        <a href="#galleries" class="button">
-            Esplora gli eventi →
-        </a>
+        <p id="photo-count"></p>
 
     </section>
 
@@ -43,17 +51,31 @@
 
 <section id="galleries">
 
-    <h2> e20 recenti </h2>
+    <div class="section-title">
 
-    <p>Le ultime emozioni raccontate attraverso i miei scatti.</p>
+        ...
+
+<section id="galleries">
+
+    <div class="section-title">
+
+        <h2>Fotografie</h2>
 
     </div>
 
-    <div id="gallery-list" class="gallery-grid"></div>
+    <div id="photo-grid" class="gallery-grid"></div>
 
 </section>
 
-<script src="js/gallery.js"></script>
+<div id="lightbox" class="lightbox">
+
+    <span id="close-lightbox">&times;</span>
+
+    <img id="lightbox-image" alt="">
+
+</div>
+
+<script src="js/event.js"></script>
 
 </body>
 </html>

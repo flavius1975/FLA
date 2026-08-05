@@ -1,9 +1,33 @@
 {
-  "titolo": "Latin Summer Night",
-
-  "descrizione": "Serata latina",
-
-  "data": "2026-07-26",
-
-  "copertina": "cover.jpg"
+    "id": "evento_0001",
+    "titolo": "Park Latino Forlì",
+    "descrizione": "Serata latina",
+    "luogo": "",
+    "data": "2026-07-13",
+    "copertina": "cover.jpg",
+    "focus": "top",
+    "visibile": true,
+    "scadenza_giorni": 30,
+    "usa_thumb": false,
+    
+    "foto": [
+    "FLA4810.jpg",
+    "FLA4811.jpg",
+    "FLA4812.jpg",
+    "FLA4813.jpg",
+    "FLA4814.jpg",
+    "FLA4816.jpg",
+    "FLA4817.jpg",
+    "FLA4818.jpg",
+    "FLA4819.jpg",
+    "FLA4824.jpg",
+    "FLA4825.jpg",
+    "FLA4860.jpg",
+    "FLA4904.jpg",
+    "FLA4994.jpg",
+    "FLA5061.jpg",
+    "FLA5129.jpg",
+    "FLA5200.jpg",
+    "FLA5218.jpg"
+  ]
 }

@@ -8,7 +8,7 @@
     "focus": "top",
     "visibile": true,
     "scadenza_giorni": 30,
-    "usa_thumb": false,
+    "usa_thumb": true,
     
     "foto": [
     "FLA4810.jpg",

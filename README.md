@@ -37,3 +37,14 @@ Repository privato.
 ---
 
 Great Project Team
+
+
+cd ~/percorso/del/progetto/FLA
+
+git status
+
+git add .
+
+git commit -m "Piccole modifiche grafiche"
+
+git push

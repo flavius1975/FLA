@@ -45,6 +45,6 @@ git status
 
 git add .
 
-git commit -m "Piccole modifiche grafiche"
+git commit -m "inserito foto evento 5"
 
 git push

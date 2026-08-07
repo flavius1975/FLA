@@ -3,57 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>FLAVIUS e20</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header class="hero">
-
+<header class="hero home-hero">
     <div class="overlay"></div>
-
-    <img src="images/hero.jpg" alt="Hero Image">
+    <img src="images/hero.jpg" alt="FLAVIUS e20">
 
     <section class="hero-content">
-
-        <h1>
-            FLAVIUS
-            <span>e20</span>
-        </h1>
-
-        <p>
-            Ogni fotografia racconta un'emozione.
-        </p>
-
-        <a href="#galleries" class="button">
-            Esplora gli e20 →
-        </a>
-
+        <h1>FLAVIUS <span>e20</span></h1>
+        <p>Ogni fotografia racconta un'emozione.</p>
+        <a href="#galleries" class="button">Esplora gli e20 <span>→</span></a>
     </section>
-
 </header>
 
-<section id="galleries">
+<main id="galleries">
 
-    <h2> e20 recenti </h2>
+    <section class="featured-section">
+        <div class="section-title">
+            <h2>Evento principale</h2>
+            <p>Il racconto fotografico più recente.</p>
+        </div>
 
-    <p>Emozioni raccontate attraverso le mie foto.</p>
+        <div id="featured-event" class="featured-event"></div>
+    </section>
 
-    </div>
+    <section class="recent-section">
+        <div class="section-title">
+            <h2>e20 recenti</h2>
+            <p>Emozioni raccontate attraverso le mie foto.</p>
+        </div>
 
-    <div id="gallery-list" class="gallery-grid"></div>
+        <div id="gallery-list" class="gallery-grid recent-grid"></div>
+    </section>
 
-</section>
+</main>
 
 <script src="js/gallery.js"></script>
-
 </body>
 </html>

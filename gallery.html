@@ -1,81 +1,55 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>FLAVIUS e20</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
 
-    <nav class="topbar">
-
-    <a href="index.html" class="back-button">
-        ← Torna agli eventi
-    </a>
-
+<nav class="topbar">
+    <a href="index.html" class="back-button">← Torna agli e20</a>
 </nav>
 
-<header class="hero" style="height:60vh;">
-
+<header class="hero event-hero">
     <div class="overlay"></div>
-
     <img id="cover-image" src="" alt="Cover">
 
     <section class="hero-content">
-
-        <h1 id="event-title">
-            Caricamento...
-        </h1>
-
+        <h1 id="event-title">Caricamento...</h1>
         <p id="event-description"></p>
-
         <p id="photo-count"></p>
-
     </section>
-
 </header>
 
-<section id="galleries">
+<main>
+    <section id="galleries" class="event-gallery-section">
+        <div class="section-title">
+            <h2>Le fotografie</h2>
+        </div>
 
-    <div class="section-title">
+        <div id="photo-grid" class="photo-grid"></div>
+    </section>
+</main>
 
-        ...
+<div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="close-lightbox" class="lightbox-close-button" type="button">Chiudi</button>
 
-<section id="galleries">
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" type="button" aria-label="Fotografia precedente">‹</button>
 
-    <div class="section-title">
-
-        <h2>Ecco le foto dell'evento :</h2>
-
+    <div class="lightbox-content">
+        <img id="lightbox-image" alt="">
+        <div id="lightbox-counter" class="lightbox-counter">Foto 1 di 1</div>
     </div>
 
-    <div id="photo-grid" class="gallery-grid"></div>
-
-</section>
-
-<div id="lightbox" class="lightbox">
-
-    <span id="close-lightbox">&times;</span>
-
-    <img id="lightbox-image" alt="">
-
+    <button id="lightbox-next" class="lightbox-nav lightbox-next" type="button" aria-label="Fotografia successiva">›</button>
 </div>
 
 <script src="js/event.js"></script>
-
 </body>
 </html>

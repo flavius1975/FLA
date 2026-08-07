@@ -48,3 +48,9 @@ git add .
 git commit -m "inserito foto evento 5"
 
 git push
+
+
+
+git add .
+git commit
+git push

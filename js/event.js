@@ -1,7 +1,7 @@
 // =====================================================
 // FLAVIUS e20
 // event.js
-// Beta 0.6
+// Beta 0.7
 // =====================================================
 
 async function loadEvent() {
@@ -18,7 +18,7 @@ async function loadEvent() {
         if (!response.ok) throw new Error("Evento non trovato");
 
         const info = await response.json();
-        const files = Array.isArray(info.foto) ? info.foto : [];
+        const files = await loadPhotoList(eventId, info);
 
         document.title = `${info.titolo} | FLAVIUS e20`;
         document.getElementById("event-title").textContent = info.titolo;
@@ -46,7 +46,8 @@ async function loadEvent() {
                     alt="Fotografia ${index + 1}"
                     class="gallery-photo"
                     data-index="${index}"
-                    data-web="galleries/${eventId}/web/${encodeURIComponent(file)}">
+                    loading="lazy"
+                    decoding="async">
             </div>
         `).join("");
 
@@ -55,6 +56,20 @@ async function loadEvent() {
         console.error("Errore caricamento evento:", error);
         document.getElementById("event-title").textContent = "Evento non disponibile";
     }
+}
+
+async function loadPhotoList(eventId, info) {
+    try {
+        const response = await fetch(`galleries/${eventId}/photos.json?v=0.7`);
+        if (!response.ok) throw new Error("Manifest non disponibile");
+
+        const manifest = await response.json();
+        if (Array.isArray(manifest.foto)) return manifest.foto;
+    } catch (error) {
+        // Compatibilità con gli eventi esistenti: usa info.foto come fallback.
+    }
+
+    return Array.isArray(info.foto) ? info.foto : [];
 }
 
 function initLightbox(files, eventId) {

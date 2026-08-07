@@ -1,0 +1,64 @@
+name: Generate photo manifests
+
+on:
+  push:
+    paths:
+      - 'galleries/**/thumb/**'
+      - 'galleries/**/web/**'
+      - '.github/workflows/generate-photo-manifests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-manifests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate manifests
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          root = Path("galleries")
+
+          for event_dir in sorted(root.glob("evento_*")):
+              thumb_dir = event_dir / "thumb"
+              web_dir = event_dir / "web"
+
+              if not thumb_dir.is_dir() or not web_dir.is_dir():
+                  continue
+
+              thumbs = {
+                  p.name for p in thumb_dir.iterdir()
+                  if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".webp", ".png"}
+              }
+
+              web_files = {
+                  p.name for p in web_dir.iterdir()
+                  if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".webp", ".png"}
+              }
+
+              # Pubblica solo fotografie presenti in entrambe le versioni.
+              files = sorted(thumbs & web_files, key=str.lower)
+
+              manifest = {"foto": files}
+              target = event_dir / "photos.json"
+              new_content = json.dumps(manifest, ensure_ascii=False, indent=4) + "\n"
+
+              if not target.exists() or target.read_text(encoding="utf-8") != new_content:
+                  target.write_text(new_content, encoding="utf-8")
+
+      - name: Commit manifests
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add galleries/*/photos.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto-update photo manifests [skip ci]"
+          git push
